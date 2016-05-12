@@ -2,10 +2,10 @@
 <widget id="com.ionicframework.kkfrontdemo416942" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>kkFrondDemo</name>
   <description>
-    Add your desription here
+    ionic模板项目
   </description>
-  <author email="keyy@kayak.com.cn">
-    The A Team
+  <author email="1501718947@qq.com">
+    Ke Yangyang
   </author>
   <content src="index.html"/>
   <access origin="*"/>

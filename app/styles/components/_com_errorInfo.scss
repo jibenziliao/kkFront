@@ -1,0 +1,59 @@
+// 提示信息指令相关样式
+// -------------------------------
+.tip-info {
+    text-align: center;
+    padding: 10px;
+    margin: 50px 30px;
+    border: 1px solid $color-primary;
+    border-radius: 5px;
+}
+
+.tip-warning {
+    @include px2px(font-size, 20px);
+    //@include px2px(height, 50px);
+    //@include px2px(line-height, 50px);
+    overflow: hidden;
+    transition: all 0.5s linear 0s;
+    i {
+        color: $color-fifth;
+        position: relative;
+        top: 2px;
+        @include px2px(margin-right, 10px);
+    }
+    height: 0;
+    line-height: 30px;
+}
+
+.tip-warning.false {
+    height: 0;
+}
+
+.tip-warning.true {
+    height: 30px;
+    //animation: myfirst 1s;
+    //-moz-animation: myfirst 1s;
+    //-webkit-animation: myfirst 1s;
+    //-o-animation: myfirst 1s;
+    //animation-delay:2s;
+    //-moz-animation-delay: 2s;
+    //-webkit-animation-delay: 2s;
+    //-o-animation-delay: 2s;
+}
+
+@keyframes myfirst {
+    to {
+        height: 0px;
+    }
+}
+
+.normal {
+    background-color: $color-fourth;
+    color: $text-color2;
+    padding-left: 30px;
+}
+
+.middle {
+    color: $color-fifth;
+    background-color: $color-primary;
+    text-align: center;
+}

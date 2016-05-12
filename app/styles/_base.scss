@@ -1,0 +1,175 @@
+// 字体大小
+// -------------------------------
+
+.icon-small {
+    @include px2px(font-size,28px);
+}
+
+.icon-mid {
+    @include px2px(font-size,34px);
+}
+
+.icon-large {
+    @include px2px(font-size,46px);
+}
+
+.icon-goods{
+    @include px2px(font-size,42px);
+}
+
+.small-fz {
+    @include px2px(font-size, $font-size6);
+}
+
+.mid-fz {
+    @include px2px(font-size, 34px);
+}
+
+.large-fz {
+    @include px2px(font-size, 40px);
+}
+.icon-large-fz {
+    @include px2px(font-size,56px);
+}
+
+// 字体颜色、背景颜色
+// -------------------------------
+
+.primary-color {
+    color: $color-primary;
+}
+
+.primary-bgcolor {
+    background-color: $color-primary;
+}
+
+.second-color {
+    color: $color-second;
+}
+
+.second-bgcolor {
+    background-color: $color-second;
+}
+
+.third-color {
+    color: $color-third;
+}
+
+.third-bgcolor {
+    background-color: $color-third;
+}
+
+.whtie-bg-block {
+    background-color: #fff;
+}
+
+.white-text {
+    color: $white-color;
+}
+
+// border
+// -------------------------------
+
+.primary-border {
+    border: 1px solid $color-primary;
+}
+.second-border{
+    border: 1px solid $color-second;
+}
+
+.border-radius-5 {
+    border-radius: 5px;
+}
+
+// 清除ionic样式
+// -------------------------------
+
+.clear-padding {
+    padding: 0 !important;
+}
+
+.clear-margin {
+    margin: 0 !important;
+}
+
+.clear-background {
+    background: none !important;
+}
+
+.clear-border {
+    border: none !important;
+}
+
+.clear-max-width {
+    max-width: inherit !important;
+}
+
+
+// 基础模块样式
+// -------------------------------
+
+body {
+    color: $text-color1;
+    font-family: $font-family;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+input,select{
+    -webkit-appearance:none; /*去除系统默认的样式*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);   /* 点击高亮的颜色*/
+}
+
+.scroll-content .scroll {
+    min-height: 100%;
+}
+
+// 布局
+// -------------------------------
+
+.layout-flex {
+    display: flex;
+}
+
+.left-block {
+    float: left;
+}
+
+.right-block {
+    float: right;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-ver-center {
+    align-items: center;
+}
+
+.footer-line-height {
+    line-height: 44px;
+}
+
+// 通用头部
+// -------------------------------
+.bar .title {
+    //@include px2px(font-size, 34px);
+    color:$color-seventh;
+}
+
+.has-footer {
+    bottom: 49px;
+}
+
+//
+.scroll-content .scroll{
+    padding-bottom: 30px;
+}
+
+.has-bg{
+    background-color: $color-seventh;
+}

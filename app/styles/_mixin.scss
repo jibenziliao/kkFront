@@ -1,0 +1,61 @@
+// 媒体查询变量
+// -------------------------------
+$base-fonts-default:            100px;  // 基准数
+$max-container:                 640px;  // 最大视屏宽度,根据设计稿而定
+$responsives:                   320px, 360px, 375px, 384px, 414px, 480px, 640px;  // 屏幕断点
+
+// 获取rem基准值
+// -------------------------------
+@mixin fz($values){
+    font-size: $values * $base-fonts-default / $max-container;
+}
+
+// 设置根节点rem基准值
+// -------------------------------
+@each $responsive in $responsives{
+    @media only screen and (min-width: #{$responsive}) {
+        html{ @include fz($responsive);}
+    }
+}
+
+
+// 特别的媒体查询适配
+// -------------------------------
+@media only screen and (max-width: 319px) {
+    html{ @include fz(319px);}
+}
+
+// 单位转换Mixin
+// -------------------------------
+
+// px转px
+// -------------------------------
+@mixin px2px($name,$value){
+    @each $responsive in $responsives {
+      @media only screen and (min-width: #{$responsive}) {
+        #{$name}: round(($value+4) * $responsive / $max-container);
+      }
+    }
+}
+
+
+// px转rem
+@mixin px2rem($name,$value){
+    #{$name}: $value / $base-fonts-default *1rem;
+}
+
+//padding&margin转换rem
+@mixin pm2rem($name,$top,$right,$down,$left){
+    #{$name}: $top/$base-fonts-default *1rem $right/$base-fonts-default *1rem $down/$base-fonts-default *1rem $left/$base-fonts-default *1rem;
+};
+
+// 银行样式
+@mixin banks-style($bankName, $color) {
+    .bank-#{$bankName}-border-left{
+        border-left-color: $color;
+    }
+
+    .bank-#{$bankName}-bg {
+        background-color: $color;
+    }
+}

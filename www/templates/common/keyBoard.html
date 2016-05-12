@@ -1,0 +1,25 @@
+<div ng-class="{true: 'key_board show', false: 'key_board'}[showBoard]">
+    <div class="board_title"><i class="iconfont icon-safe"></i>农信银行数字键盘安全保证</div>
+    <div class="row">
+        <span class="col-33 col-center" ng-click="printPwd($event)">1</span>
+        <span class="col-33 col-center" ng-click="printPwd($event)">2</span>
+        <span class="col-33 col-center" ng-click="printPwd($event)">3</span>
+    </div>
+    <div class="row">
+        <span class="col-33 col-center" ng-click="printPwd($event)">4</span>
+        <span class="col-33 col-center" ng-click="printPwd($event)">5</span>
+        <span class="col-33 col-center" ng-click="printPwd($event)">6</span>
+    </div>
+    <div class="row">
+        <span class="col-33 col-center" ng-click="printPwd($event)">7</span>
+        <span class="col-33 col-center" ng-click="printPwd($event)">8</span>
+        <span class="col-33 col-center" ng-click="printPwd($event)">9</span>
+    </div>
+    <div class="row">
+        <span class="col-33 col-center" ng-click="hideKeyBoard()">
+            <i class="ion-chevron-down"></i>
+        </span>
+        <span class="col-33 col-center" ng-click="printPwd($event)">0</span>
+        <span class="col-33 col-center" ng-click="deletePwd()">X</span>
+    </div>
+</div>

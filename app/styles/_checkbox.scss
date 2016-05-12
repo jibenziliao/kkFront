@@ -1,0 +1,59 @@
+// checkbox样式(覆写ionic框架checkbox样式)
+// -------------------------------
+@mixin checkbox-style($off-border-color, $on-bg-color, $on-border-color) {
+    & input:before,
+    & .checkbox-icon:before {
+        border-color: $off-border-color;
+    }
+
+    // what the background looks like when its checked
+    & input:checked:before,
+    & input:checked + .checkbox-icon:before {
+        background: $on-bg-color;
+        border-color: $on-border-color;
+    }
+}
+
+.square-checkbox {
+
+    .item-checkbox {
+        padding-left: 45px;
+    }
+
+    .item-checkbox .checkbox {
+        margin-top: -17px;
+    }
+
+    .checkbox input,
+    .checkbox-icon {
+        width: 20px;
+        height: 20px;
+        &:before {
+            border-radius: 5px;
+            background: transparent;
+        }
+    }
+
+    .checkbox-opacity {
+        @include checkbox-style(#fff, rgba(0, 0, 0, 0), #fff);
+    }
+
+    .checkbox input:disabled:checked:before,
+    .checkbox input:disabled:checked + .checkbox-icon:before {
+        background: rgba(0, 0, 0, 0);
+    }
+
+    .checkbox input:checked:before,
+    input:checked + .checkbox-icon:before {
+        border-width: 1px;
+    }
+
+    .checkbox input:after,
+    .checkbox-icon:after {
+        top: 30%;
+        left: 17%;
+    }
+
+}
+
+@import 'bower_components/ionic/scss/ionic';

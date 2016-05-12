@@ -1,0 +1,60 @@
+// -------------------------------
+// 1.1变量
+// -------------------------------
+
+// 颜色变量
+// -------------------------------
+
+$color-primary:                 #17b4f2 !default;   //主色调 蓝色
+$color-second:                  #95c535 !default;   //主色调2 绿色
+$color-third:                   #ccc    !default;   //灰色
+$color-fourth:                  #fef5e1 !default;   //提示黄色
+$color-fifth:					#f54f50	!default;	//提示红色
+$color-sixth:					#ff9385	!default;	//资产橙色
+$color-seventh:                 #fff    !default;   //白色
+
+// 字体颜色变量
+// -------------------------------
+
+$text-color1:                   #333    !default;  //基础字体颜色1
+$text-color2:                   #4c4c4c !default;  //基础字体颜色2
+$text-color3:                   #666    !default;  //基础字体颜色3
+$text-color4:                   #808080 !default;  //基础字体颜色4
+$text-color5:                   #999    !default;  //基础字体颜色5
+
+// 字体变量
+// -------------------------------
+
+$font-family:                   "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;  //基础字体
+$font-family2:                  "微软雅黑",Microsoft YaHei;  //基础字体2
+$font-family3:                  HelveticaNeueLTPro;  //数值字体
+$font-size1:                    34px    !default;  //明显强调
+$font-size2:                    28px    !default;  //一般字体
+$font-size3:                    24px    !default;  //
+$font-size4:                    20px    !default;  //提示类文字大小
+$font-size5:                    30px    !default;  //提示类文字大小
+$font-size6:                    22px    !default;  //提示类文字大小
+$font-size7:                    36px    !default;  //提示类文字大小
+
+
+$num-size1:                     120px   !default;  //精选首页收益-数字
+$num-size2:                     90px    !default;  //资产收益-数字
+$num-size3:                     60px    !default;  //产品收益-数字
+$num-size4:                     40px    !default;  //资产投资-数字
+$num-size5:                     30px    !default;  //资产投资-数字
+
+$white-color:                   #fff    !default;  //基础带背景字体颜色
+$spacing:                       10px    !default;  //基础间距，内容保护区域
+
+$padding-spacing:               14px    !default;  //padding间距，主要用在产品详情页，产品期限区域
+
+
+
+// border变量
+// -------------------------------
+
+$border-color1:                #d9d9d9  !default; //粗线条
+$border-color2:                #e6e6e6  !default; //细线条
+$border-color3:                $color-third !default; //灰色线条
+$border-color4:                #b7b6b6 !default; //灰色线条
+

@@ -1,0 +1,39 @@
+/**
+ * Override Ionic variables here
+ *
+ * e.g. $positive:  #387ef5 !default;
+ */
+
+// Include all of Ionic for compilation
+
+// -------------------------------
+// 自定义Ionic变量
+// -------------------------------
+$button-stable-border: #f0f0f0 !default;
+// footer border 线条颜色
+$stable: #f3f3f3 !default;
+// footer 背景颜色
+$positive: #17b4f2 !default;
+// footer 字体颜色
+$base-background-color: #f7f7f7 !default;
+// 基础背景颜色
+
+
+// iOS View Transitions
+// -------------------------------
+
+$ios-transition-duration:              500ms !default;
+$ios-transition-timing-function:       cubic-bezier(.36, .66, .04, 1) !default;
+$ios-transition-container-bg-color:    #fff !default;
+
+
+[nav-view-transition="ios"] {
+
+    &[nav-view-direction="forward"],
+    &[nav-view-direction="back"] {
+        background-color: $ios-transition-container-bg-color;
+    }
+}
+
+
+@import 'bower_components/ionic/scss/ionic';

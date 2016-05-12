@@ -1,0 +1,391 @@
+//dialog样式
+
+.ngdialog {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.ngdialog *,
+.ngdialog *:before,
+.ngdialog *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+.ngdialog {
+    position: fixed;
+    overflow: hidden;
+    //-webkit-overflow-scrolling: touch;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.ngdialog.ngdialog-disabled-animation * {
+    -webkit-animation: none !important;
+    animation: none !important;
+}
+
+.ngdialog-overlay {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.4);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+    -webkit-animation: ngdialog-fadein 0.5s;
+    animation: ngdialog-fadein 0.5s;
+}
+
+.ngdialog.ngdialog-closing .ngdialog-overlay {
+    -webkit-backface-visibility: hidden;
+    -webkit-animation: ngdialog-fadeout 0.5s;
+    animation: ngdialog-fadeout 0.5s;
+}
+
+.ngdialog-content {
+    -webkit-backface-visibility: hidden;
+
+}
+
+.ngdialog.ngdialog-closing .ngdialog-content {
+    -webkit-backface-visibility: hidden;
+    -webkit-animation: ngdialog-fadeout 0.5s;
+    animation: ngdialog-fadeout 0.5s;
+}
+
+.ngdialog-close:before {
+    font-family: 'Helvetica', Arial, sans-serif;
+    content: '\00D7';
+    cursor: pointer;
+}
+
+body.ngdialog-open {
+    overflow: hidden;
+}
+
+.ngdialog.ngdialog-theme-default .ngdialog-content {
+    border-radius: 5px;
+    color: #444;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.5em;
+    margin: 0 auto;
+    max-width: 100%;
+    height: 100%;
+    width: 450px;
+}
+
+.ngdialog.ngdialog-theme-default.ngdialog-closing .buying-popup {
+    -webkit-animation: ngdialog-flyOut .5s;
+    animation: ngdialog-flyOut .5s;
+}
+
+.ngdialog.ngdialog-theme-default .ngdialog-content .buying-popup {
+    -webkit-animation: ngdialog-flyin .5s;
+    animation: ngdialog-flyin .5s;
+}
+
+.ngdialog.ngdialog-theme-default .ngdialog-close {
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.ngdialog.ngdialog-theme-default .ngdialog-close:before {
+    background: transparent;
+    border-radius: 3px;
+    color: #bbb;
+    content: '\00D7';
+    font-size: 26px;
+    font-weight: 400;
+    height: 30px;
+    line-height: 26px;
+    position: absolute;
+    right: 3px;
+    text-align: center;
+    top: 3px;
+    width: 30px;
+}
+
+.ngdialog.ngdialog-theme-default .ngdialog-close:hover:before,
+.ngdialog.ngdialog-theme-default .ngdialog-close:active:before {
+    color: #777;
+}
+
+.ngdialog.ngdialog-theme-default .ngdialog-message {
+    margin-bottom: .5em;
+}
+
+.ngdialog.ngdialog-theme-default .ngdialog-input {
+    margin-bottom: 1em;
+}
+
+@-webkit-keyframes ngdialog-fadeout {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes ngdialog-fadeout {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes ngdialog-fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes ngdialog-fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes ngdialog-flyin {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-40px);
+        transform: translateY(-40px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+}
+
+@keyframes ngdialog-flyin {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-40px);
+        -ms-transform: translateY(-40px);
+        transform: translateY(-40px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+}
+
+@-webkit-keyframes ngdialog-flyout {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(-40px);
+        transform: translateY(-40px);
+    }
+}
+
+@keyframes ngdialog-flyout {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(-40px);
+        -ms-transform: translateY(-40px);
+        transform: translateY(-40px);
+    }
+}
+
+.buying-popup.keyboard-on {
+    top: 0;
+    margin-top: 0;
+    transition: all 0.5s ease 0s;
+    -webkit-transition: all 0.5s ease 0s;
+}
+
+.buying-popup {
+    position: relative;
+    background-color: #f7f7f7;
+    width: 320px;
+    border-radius: 5px;
+    top: 50%;
+    margin: 0 auto;
+    margin-top: -190px;
+    transition: all 0.5s ease 0s;
+    -webkit-transition: all 0.5s ease 0s;
+    .popup-head {
+        border-bottom: 1px solid #e6e6e6;
+        padding-left: 30px;
+        position: relative;
+        i {
+            //float: right;
+            //margin-right: 10px;
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            color: #999999;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+    }
+    .paypassword-body {
+        text-align: center;
+        color: #999;
+        font-size: 16px;
+        padding: 0;
+        overflow: hidden;
+        & > div {
+            margin: 15px 0;
+            i.ion-ios-arrow-right {
+                position: absolute;
+                right: 20px;
+            }
+        }
+        lable {
+            width: 100%;
+        }
+        input {
+            width: 20px;
+        }
+    }
+    .amount-money {
+        strong {
+            color: #d9050a;
+        }
+        b {
+            text-decoration: line-through;
+            color: #bfbfbf;
+            font-weight: normal;
+            margin-left: 10px;
+        }
+    }
+    .sub-title {
+        color: #666;
+    }
+    .popup-title {
+        color: #999;
+        font-size: 16px;
+    }
+    .close-popup {
+        color: #999;
+        font-size: 20px;
+        margin-top: 2px;
+    }
+    .popup-buttons {
+        padding: 0;
+    }
+    .payment-btn {
+        @include px2px(font-size, 32px);
+        background-color: $color-primary;
+        border: none;
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 0 0 5px 5px;
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+        &.activated, .active {
+            background-color: $color-primary;
+        }
+    }
+    .bank-card {
+        //padding-bottom: 20px;
+        //border-bottom: 1px solid #e6e6e6;
+        //background: none;
+        margin-bottom: 20px !important;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #e6e6e6;
+    }
+    .password-form {
+        padding: 0 20px;
+    }
+    .input-password {
+        border: 1px solid #e6e6e6;
+        padding: 0;
+        border-radius: 5px;
+        input {
+            text-align: center;
+            font-size: 30px;
+            height: 44px;
+            line-height: 44px;
+            border-right: 1px solid #e6e6e6;
+            padding: 0;
+            &:first-child {
+                border-radius: 5px 0 0 5px;
+            }
+            &:last-child {
+                border-right: none;
+                border-radius: 0px 5px 5px 0px;
+            }
+        }
+    }
+    .find-password {
+        font-size: 14px;
+        text-align: right;
+        padding-right: 15px;
+        margin-bottom: 0 !important;
+        i.icon-lock {
+            background: url('../images/business/unlock.png') no-repeat center;
+            width: 14px;
+            height: 17px;
+            -webkit-background-size: contain;
+            background-size: contain;
+            display: inline-block;
+            margin-right: 5px;
+            position: relative;
+            top: 2px;
+        }
+        a {
+            @include px2px(font-size, 26px);
+            margin-left: 5px;
+            padding: 10px;
+            color: $text-color2;
+        }
+    }
+}
+
+.change-ticket-body {
+    position: relative;
+    height: 300px;
+    .scroll-content {
+        border-radius: 0 0 5px 5px;
+        top: 15px;
+        bottom: 15px;
+    }
+}

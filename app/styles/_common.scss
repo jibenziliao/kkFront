@@ -1,0 +1,101 @@
+//设置数值字体
+.value-font{
+    font-family: $font-family3 !important;
+}
+
+
+// footer模块样式
+// -------------------------------
+.tab-item .icon {
+    display: block;
+    margin: 0 auto;
+    height: 32px;
+    font-size: 22px;
+    line-height: 32px;
+}
+
+
+
+//在内容内的头部
+// -------------------------------
+.header-in-content {
+    background: none;
+    position: relative;
+    h1 {
+        color: #fff;
+    }
+}
+
+//去掉标题下面的线
+// -------------------------------
+.bar-header {
+    border-bottom-width: 0;
+}
+
+// 显示密码
+// -------------------------------
+.show-password-icon {
+    position: absolute;
+    right: 10px;
+    i {
+        line-height: 44px;
+    }
+}
+
+.show-password-icon2 {
+    position: absolute;
+    right: 0;
+}
+
+// 密码提示信息
+// -------------------------------
+.password-info {
+    @include px2px(font-size, $font-size3);
+    color: $text-color5;
+    margin: 0 -15px 20px;
+    text-align: center;
+}
+
+.background-input {
+    input::-webkit-input-placeholder {
+        color: #fff;
+    }
+}
+
+// 隐藏滚动条
+// -------------------------------
+.scroll-bar-v {
+    display: none
+}
+
+// 加载中或请求失败特殊样式
+.requestCompleteSpecail {
+    margin-top: 90px;
+}
+
+// 银行卡样式
+// -------------------------------
+@include banks-style(COMMON, #d45151);
+// 通用银行
+@include banks-style(ICBC, #e30b20);
+// 中国工商银行
+@include banks-style(CCB, #063d8e);
+// 中国建设银行
+@include banks-style(ABC, #11816c);
+// 中国农业银行
+@include banks-style(BOC, #b61f27);
+// 中国银行
+@include banks-style(CMB, #e30b20);
+// 招商银行
+@include banks-style(CIB, #004384);
+// 兴业银行
+@include banks-style(BCM, #1e2485);
+// 交通银行
+@include banks-style(CEB, #6a1d83);
+// 光大银行
+@include banks-style(CMBC, #5da373);
+// 中国民生银行
+@include banks-style(HXB, #e30b20);
+// 华夏银行
+@include banks-style(PAB, #ea5504);
+// 平安银行
